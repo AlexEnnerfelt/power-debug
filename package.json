@@ -1,0 +1,21 @@
+{
+  "name": "com.ennerfelt.powerdebug",
+  "version": "0.1.0",
+  "displayName": "Power Debug",
+  "unity": "2019.1",
+  "unityRelease": "0b5",
+  "documentationUrl": "https://example.com/",
+  "changelogUrl": "https://example.com/changelog.html",
+  "licensesUrl": "https://example.com/licensing.html",
+  "keywords": [
+    "keyword1",
+    "keyword2",
+    "keyword3"
+  ],
+  "author": {
+    "name": "Alex Ennerfelt",
+    "email": "alex.ennerfelt@gmail.com",
+    "url": "https://www.unity3d.com"
+  },
+  "description": "Adds a wrapper around the UnityEngine.Debug.log methods to make it possible to set a threshold level for if they should show up in the console or not."
+}

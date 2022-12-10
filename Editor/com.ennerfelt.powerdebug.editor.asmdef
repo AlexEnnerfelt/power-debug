@@ -1,0 +1,16 @@
+{
+    "name": "com.ennerfelt.powerdebug.editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:b9657dbf5723b334cbdd7f4b15e52ab9"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
