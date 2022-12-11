@@ -32,6 +32,6 @@
   ],
 
   "dependencies": {
-    "com.ennerfelt.utilities": "0.1.0"
+    "com.ennerfelt.utilities": "https://github.com/AlexEnnerfelt/UnityUtilities"
   }
 }
