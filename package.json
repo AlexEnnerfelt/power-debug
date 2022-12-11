@@ -21,16 +21,6 @@
   "description": "Adds a wrapper around the UnityEngine.Debug.log methods to make it possible to set a threshold level for if they should show up in the console or not.",
 
 
-  "scopedRegistries": [
-    {
-      "name": "AlexEnnerfelt",
-      "url": "https://github.com/AlexEnnerfelt",
-      "scopes": [
-        "com.ennerfelt"
-      ]
-    }
-  ],
-
   "dependencies": {
     "com.ennerfelt.utilities": "https://github.com/AlexEnnerfelt/UnityUtilities"
   }
