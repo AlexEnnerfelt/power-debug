@@ -22,6 +22,6 @@
 
 
   "dependencies": {
-    "com.ennerfelt.utilities": "git+https://github.com/AlexEnnerfelt/UnityUtilities.git"
+    "com.ennerfelt.utilities": "git+https://github.com/AlexEnnerfelt/UnityUtilities.git#v0.1.0"
   }
 }
