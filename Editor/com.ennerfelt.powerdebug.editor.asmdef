@@ -2,7 +2,8 @@
     "name": "com.ennerfelt.powerdebug.editor",
     "rootNamespace": "",
     "references": [
-        "GUID:b9657dbf5723b334cbdd7f4b15e52ab9"
+        "GUID:b9657dbf5723b334cbdd7f4b15e52ab9",
+        "GUID:4c34351b7db11a94a86e7344a9a6e32e"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

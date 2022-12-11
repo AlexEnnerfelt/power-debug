@@ -10,13 +10,28 @@
   "keywords": [
     "Debug",
     "Logging",
-    "Console", 
+    "Console",
     "Utility"
   ],
   "author": {
     "name": "Alex Ennerfelt",
     "email": "alex.ennerfelt@gmail.com",
-    "url": "https://www.unity3d.com"
+    "url": "https://github.com/AlexEnnerfelt"
   },
-  "description": "Adds a wrapper around the UnityEngine.Debug.log methods to make it possible to set a threshold level for if they should show up in the console or not."
+  "description": "Adds a wrapper around the UnityEngine.Debug.log methods to make it possible to set a threshold level for if they should show up in the console or not.",
+
+
+  "scopedRegistries": [
+    {
+      "name": "AlexEnnerfelt",
+      "url": "https://github.com/AlexEnnerfelt",
+      "scopes": [
+        "com.ennerfelt"
+      ]
+    }
+  ],
+
+  "dependencies": {
+    "com.ennerfelt.utilities": "0.1.0"
+  }
 }

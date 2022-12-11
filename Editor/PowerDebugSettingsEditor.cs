@@ -1,8 +1,16 @@
+
+using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
 using UnityEditor;
+using UnityEditor.Compilation;
 using UnityEngine;
 using UnityEngine.UIElements;
-
+using UAssembly = UnityEditor.Compilation.Assembly;
+using Assembly = System.Reflection.Assembly;
+using System.Collections.Immutable;
 
 // Register a SettingsProvider using UIElements for the drawing framework:
 static class PowerDebugSettingsEditor
@@ -24,13 +32,13 @@ static class PowerDebugSettingsEditor
     [SettingsProvider]
     public static SettingsProvider CreateMyCustomSettingsProvider() {
         var provider = new SettingsProvider("PowerDebug/Logging Level", SettingsScope.User) {
-            label = "Logging Level", 
+            label = "Logging Level",
             activateHandler = (searchContext, rootElement) => {
                 var settings = GetOrCreateSettings();
-               //var serializedSettings = GetSerializedSettings();
+                //var serializedSettings = GetSerializedSettings();
                 PowerDebug.Init(settings);
                 var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Packages/com.ennerfelt.powerdebug/Editor/UIElements/settings_ui.uss");
-                
+
                 var visualTreeAsset = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Packages/com.ennerfelt.powerdebug/Editor/UIElements/logging_level_settings_menu.uxml");
                 var rootFromUxml = visualTreeAsset.Instantiate();
 
@@ -38,6 +46,11 @@ static class PowerDebugSettingsEditor
                 rootElement.styleSheets.Add(styleSheet);
 
                 var levelSlider = rootElement.Q<SliderInt>("loglevel-slider");
+                var typeDropdown = rootElement.Q<DropdownField>("type-dropdown");
+
+                typeDropdown.choices = AssemblyUtility.typesTable.Keys.ToList();
+
+
                 levelSlider.value = settings.Number;
                 levelSlider.RegisterValueChangedCallback(level => {
                     settings.Number = level.newValue;
@@ -50,4 +63,6 @@ static class PowerDebugSettingsEditor
 
         return provider;
     }
+
 }
+
