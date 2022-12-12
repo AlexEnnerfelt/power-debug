@@ -4,9 +4,9 @@
   "displayName": "Power Debug",
   "unity": "2019.1",
   "unityRelease": "0b5",
-  "documentationUrl": "https://github.com/AlexEnnerfelt/PowerDebug",
-  "changelogUrl": "https://github.com/AlexEnnerfelt/PowerDebug/blob/main/CHANGELOG.md",
-  "licensesUrl": "https://github.com/AlexEnnerfelt/PowerDebug/blob/main/LICENSE",
+  "documentationUrl": "https://github.com/AlexEnnerfelt/power-debug",
+  "changelogUrl": "https://github.com/AlexEnnerfelt/power-debug/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/AlexEnnerfelt/power-debug/blob/main/LICENSE",
   "keywords": [
     "Debug",
     "Logging",
@@ -22,6 +22,6 @@
 
 
   "dependencies": {
-    
+
   }
 }
