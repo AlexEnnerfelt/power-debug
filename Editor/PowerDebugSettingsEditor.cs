@@ -46,12 +46,8 @@ static class PowerDebugSettingsEditor
                 rootElement.styleSheets.Add(styleSheet);
 
                 var levelSlider = rootElement.Q<SliderInt>("loglevel-slider");
-                var typeDropdown = rootElement.Q<DropdownField>("type-dropdown");
-
-                typeDropdown.choices = AssemblyUtility.typesTable.Keys.ToList();
-
-
                 levelSlider.value = settings.Number;
+
                 levelSlider.RegisterValueChangedCallback(level => {
                     settings.Number = level.newValue;
                 });

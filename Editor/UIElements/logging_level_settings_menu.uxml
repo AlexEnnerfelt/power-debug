@@ -4,5 +4,4 @@
         <ui:VisualElement style="height: 10px;" />
         <ui:SliderInt picking-mode="Ignore" label="Loglevel" high-value="1500" name="loglevel-slider" show-input-field="true" inverted="false" style="flex-direction: column; align-items: flex-start; justify-content: flex-end;" />
     </ui:GroupBox>
-    <ui:DropdownField label="Dropdown" index="-1" name="type-dropdown" />
 </ui:UXML>
