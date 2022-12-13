@@ -14,10 +14,14 @@ public class PowerDebugSettings : ScriptableObject
     }
 
     [field: SerializeField]
-    public int Number { get; set; } = 1;
+    public int Number { get; set; } = 1500;
+    public int DefaultThreshold = 1;
     public LogGroupList logGroupList;
     
     public string ProcessLogMessage(LogMessage logMessage) {
+        if (logMessage.context == null) {
+            return logMessage.message;
+        }
         var grp = logGroupList.IsTypeSpecifiedInGroup(logMessage.context.GetType().FullName);
 
         if (grp != null) {
