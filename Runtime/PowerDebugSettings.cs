@@ -5,14 +5,17 @@ using UnityEngine;
 
 public class PowerDebugSettings : ScriptableObject
 {
-    public const string k_MyCustomSettingsPath = "Assets/Resources/Settings/PowerDebugSettings.asset";
-    public const string k_SettingsFileName = "/Settings/PowerDebugSettings.asset";
-    public static PowerDebugSettings Instance { get; private set; }
-    
-    private void OnEnable() {
-        Instance = this;
+    public const string k_MyCustomSettingsPath = "Assets/Resources/PowerDebugSettings.asset";
+    public const string k_SettingsFileName = "PowerDebugSettings";
+    public static PowerDebugSettings instance;
+    public static PowerDebugSettings Instance {
+        get {
+            if (instance == null) {
+                instance = Resources.Load(k_SettingsFileName) as PowerDebugSettings;
+            }
+            return instance;
+        } 
     }
-
     [field: SerializeField]
     public int Number { get; set; } = 1500;
     public int DefaultThreshold = 1;

@@ -7,8 +7,13 @@ using Object = UnityEngine.Object;
 
 public static class PowerDebug
 {
-    public static PowerDebugSettings Settings { get { return PowerDebugSettings.Instance; } }
-
+    //private static PowerDebugSettings settings;
+    public static PowerDebugSettings Settings {
+        get {         
+            return PowerDebugSettings.Instance;
+        }
+    }
+    
     internal static void PowerLogMessage(object message, Object context, int threshold) {
         if (threshold <= Settings.Number) {
             if (context == null) {
@@ -27,8 +32,8 @@ public static class PowerDebug
 
     }
 
-    public static bool isDebugBuild { get { return Debug.isDebugBuild;  } }
-    public static bool developerConsoleVisible { get { return Debug.developerConsoleVisible;  } set { Debug.developerConsoleVisible = value; } }
+    public static bool isDebugBuild { get { return Debug.isDebugBuild; } }
+    public static bool developerConsoleVisible { get { return Debug.developerConsoleVisible; } set { Debug.developerConsoleVisible = value; } }
     public static ILogger unityLogger => Debug.unityLogger;
 
     public static void Log(object message) {
@@ -68,7 +73,7 @@ public static class PowerDebug
 
     public static void LogException(Exception exception) {
         Debug.LogException(exception);
-    }  
+    }
     public static void LogException(Exception exception, Object context) {
         Debug.LogException(exception, context);
     }
