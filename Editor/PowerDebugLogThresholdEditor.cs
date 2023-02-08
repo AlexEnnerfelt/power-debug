@@ -12,7 +12,7 @@ static class PowerDebugLogThresholdEditor
             activateHandler = (searchContext, rootElement) => {
                 var settings = PowerDebugSettingsEditor.GetOrCreateSettings();
                 //var serializedSettings = GetSerializedSettings();
-                var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Packages/com.ennerfelt.powerdebug/Editor/UIElements/settings_ui.uss");
+                var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Packages/com.ennerfelt.powerdebug/Editor/UIElements/powerdebug-settings.uss");
 
                 var visualTreeAsset = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Packages/com.ennerfelt.powerdebug/Editor/UIElements/logging_level_settings_menu.uxml");
                 var rootFromUxml = visualTreeAsset.Instantiate();

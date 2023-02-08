@@ -1,8 +1,5 @@
 .loglevel-button {
+    color: rgb(34, 34, 34);
     width: 33%;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    margin-bottom: 0;
     height: 35px;
 }
