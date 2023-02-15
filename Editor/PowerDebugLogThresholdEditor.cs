@@ -28,24 +28,23 @@ static class PowerDebugLogThresholdEditor
                 levelSlider.value = settings.Number;
 
                 levelSlider.RegisterValueChangedCallback(level => {
-                    settings.Number = level.newValue;
+                    OnNumberChanged(level.newValue);
                 });
 
                 buttonLow.clicked += () => {
-                    settings.Number = (int)LogThreshold.Low;
-                    OnNumberChanged(settings.Number);
+                    OnNumberChanged((int)LogThreshold.Low);
                 };
-                buttonMedium.clicked += () => {
-                    settings.Number = (int)LogThreshold.Medium;
-                    OnNumberChanged(settings.Number);
+                buttonMedium.clicked += () => { 
+                    OnNumberChanged((int)LogThreshold.Medium);
                 };
                 buttonHigh.clicked += () => {
-                    settings.Number = (int)LogThreshold.High;
-                    OnNumberChanged(settings.Number);
+                    OnNumberChanged((int)LogThreshold.High);
                 };
 
                 void OnNumberChanged(int number) {
                     levelSlider.value = number;
+                    settings.Number = number;
+                    EditorUtility.SetDirty(settings);
                 }
             },
 

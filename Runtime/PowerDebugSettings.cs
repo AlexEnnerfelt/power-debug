@@ -17,7 +17,7 @@ public class PowerDebugSettings : ScriptableObject
         } 
     }
     [field: SerializeField]
-    public int Number { get; set; } = 1500;
+    public int Number { get; set; }
     public int DefaultThreshold = 1;
     public LogGroupList logGroupList;
     
@@ -51,7 +51,6 @@ public class PowerDebugSettings : ScriptableObject
             return null;
         }
     }
-
     [Serializable]
     public class LogGroup {
         public bool hasPrefix;
