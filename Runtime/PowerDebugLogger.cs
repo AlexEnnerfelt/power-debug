@@ -9,10 +9,10 @@ public static class PowerDebug
 {
     //private static PowerDebugSettings settings;
     public static PowerDebugSettings Settings {
-        get {         
-            return PowerDebugSettings.Instance;
-        }
+        [HideInCallstack]
+        get { return PowerDebugSettings.Instance; }
     }
+
     [HideInCallstack]
     internal static void PowerLogMessage(object message, Object context, int threshold) {
         if (threshold <= Settings.Number) {
@@ -25,19 +25,34 @@ public static class PowerDebug
             }
         }
     }
+
     [HideInCallstack]
-    internal static void PowerLogError(object message, Object context, int threshold) {
+    internal static void PowerLogError(object message, Object context, int threshold) { }
 
-    }
     [HideInCallstack]
-    internal static void PowerLogWarning(object message, Object context, int threshold) {
+    internal static void PowerLogWarning(object message, Object context, int threshold) { }
 
+    public static bool isDebugBuild {
+        [HideInCallstack]
+        get { return Debug.isDebugBuild; }
     }
 
-    public static bool isDebugBuild { get { return Debug.isDebugBuild; } }
-    public static bool developerConsoleVisible { get { return Debug.developerConsoleVisible; } set { Debug.developerConsoleVisible = value; } }
-    public static ILogger unityLogger => Debug.unityLogger;
+    public static bool developerConsoleVisible {
+        [HideInCallstack]
+        get { return Debug.developerConsoleVisible; }
+        [HideInCallstack]
+        set { Debug.developerConsoleVisible = value; }
+    }
 
+    
+    public static ILogger unityLogger {
+        [HideInCallstack]
+        get {
+            return Debug.unityLogger;
+            return Debug.unityLogger;
+        }
+    }
+    
     [HideInCallstack]
     public static void Log(object message) {
         PowerLogMessage(message, null, Settings.DefaultThreshold);
