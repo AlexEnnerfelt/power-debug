@@ -29,6 +29,6 @@
     }
   ],
   "dependencies": {
-    "com.ennerfelt.utilities": "0.1.4"
+    "com.unpopular-opinion.tools": "0.1.4"
   }
 }
