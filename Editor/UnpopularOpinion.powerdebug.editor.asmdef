@@ -1,10 +1,12 @@
 {
-    "name": "com.ennerfelt.powerdebug.runtime",
+    "name": "com.ennerfelt.powerdebug.editor",
     "rootNamespace": "",
     "references": [
-        "GUID:94cb8d9542404f044b4dc6fcd6aefccb"
+        "com.ennerfelt.powerdebug.runtime"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
